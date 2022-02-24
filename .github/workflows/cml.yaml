@@ -11,12 +11,8 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip install -r requirements.txt
-          python wine_classify.py
-
-          #cat metrics.txt >> report.md
-          #cml publish plot.png --md >> report.md
-          cml publish MNNB.png --md >> report.md
-          cml publish LogReg.png --md >> report.md
-          cml send-comment report.md
+          python train.py
+          cat metrics.txt >> report.md
+          cml publish plot.png --md >> report.md
           
           
