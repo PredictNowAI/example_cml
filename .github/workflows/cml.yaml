@@ -15,8 +15,8 @@ jobs:
 
           #cat metrics.txt >> report.md
           #cml publish plot.png --md >> report.md
-          #cml send-comment report.md
           cml publish MNNB.png --md >> report.md
           cml publish LogReg.png --md >> report.md
+          cml send-comment report.md
           
           
