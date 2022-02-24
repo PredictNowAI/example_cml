@@ -126,4 +126,6 @@ if __name__ == "__main__":
 
     data = load_wine()
     classification_report(MultinomialNB(), data.data, data.target)
+    plt.savefig("MNNB.png")
     classification_report(LogisticRegression(), data.data, data.target)
+    plt.savefig("LogReg.png")
